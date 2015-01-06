@@ -1,6 +1,6 @@
 Sorts
 =====
-Comparison of sort algorithms for data structures project using python turtle module
+Visualization and comparison of sort algorithms for data structures project
 
 
 
