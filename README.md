@@ -26,4 +26,6 @@ Sorting algorithms are prevalent in introductory computer science classes, where
 --------------------------------------------------------------------------------------
 | Name | Best | Average | Worst | Memory | Stable | Method | Other notes |
 |--------|-------|-----------|--------|------------|---------|----------|----------------|
-|Quicksort|$$n log n$$|$$n log n$$|$$n^2$$| $$logn$$on average, worst case is $$n$$: Sedgewick variation is $$logn$$ worst case| typical in-place sort is not stable; stable versions exist |Partitioning|Quicksort is usually done in place with $$O(log n)$$ stack space.Most implementations are unstable, as stable in-place partitioning is more complex. Naïve variants use an $$O(n)$$ space array to store the partition. Quicksort variant using three-way (fat) partitioning takes $$O(n)$$ comparisons when sorting an array of equal keys.
+|Insertion Sort|$$n$$|$$n^2$$|$$n^2$$|$$1$$|Yes|Insertion|O(n + d), in the worst case over sequences that have d inversions.
+|Shell Sort
+|Quicksort|$$n log n$$|$$n log n$$|$$n^2$$| $$logn$$on average, worst case is $$n$$: Sedgewick variation is $$logn$$ worst case| typical in-place sort is not stable; stable versions exist |Partitioning|Quicksort is usually done in place with $$O(log n)$$ stack space.Most implementations are unstable, as stable in-place partitioning is more complex. Naïve variants use an $$O(n)$$ space array to store the partition. Quicksort variant using three-way (fat) partitioning takes $$O(n)$$ comparisons when sorting an array of equal keys.|
