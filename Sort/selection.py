@@ -2,7 +2,7 @@ __author__ = 'Hamid FzM'
 
 
 def sort(arr):
-    """ Heap sort a list
+    """ Selection sort a list
 
     :type arr: list
     :param arr: List to sort
