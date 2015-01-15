@@ -23,5 +23,3 @@ def sort(arr):
         gap = gap/2 if gap/2 else (0 if gap == 1 else 1)
 
     return arr
-
-print sort([151, 901, 58, 389, 733, 553, 366, 757, 511, 176, 564, 996, 189, 312, 326, 267, 494, 45, 530, 889])
