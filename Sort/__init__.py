@@ -8,3 +8,4 @@ from merge import sort as merge_sort
 from selection import sort as selection_sort
 from gnome import sort as gnome_sort
 from cocktail import sort as cocktail_sort
+from oddeven import sort as oddeven_sort
