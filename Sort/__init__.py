@@ -12,3 +12,4 @@ from oddeven import sort as oddeven_sort
 from heap import sort as heap_sort
 from stooge import sort as stooge_sort
 from bitonic import sort as bitonic_sort
+from comb import sort as comb_sort
