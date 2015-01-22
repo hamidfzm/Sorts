@@ -15,6 +15,13 @@ class Pile(list):
 
 
 def sort(arr):
+    """ Patience sort a list
+
+    :type arr: list
+    :param arr: List to sort
+    :returns: list -- Sorted list
+    """
+
     piles = []
     # sort into piles
     for x in arr:
