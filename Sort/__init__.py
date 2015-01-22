@@ -13,3 +13,4 @@ from heap import sort as heap_sort
 from stooge import sort as stooge_sort
 from bitonic import sort as bitonic_sort
 from comb import sort as comb_sort
+from cycle import sort as cycle_sort
