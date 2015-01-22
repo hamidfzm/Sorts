@@ -16,3 +16,4 @@ from comb import sort as comb_sort
 from cycle import sort as cycle_sort
 from radix import sort as radix_sort
 from patience import sort as patience_sort
+from pancake import sort as pancake_sort
