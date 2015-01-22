@@ -59,5 +59,3 @@ def split_by_sign(a_list):
         else:
             buckets[1].append(num)
     return buckets
-
-print sort([151, 901, 58, 389, 733, 553, 366, 757, 511, 176, 564, 996, 189, 312, 326, 267, 494, 45, 530, 889])
