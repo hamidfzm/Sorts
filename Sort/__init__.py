@@ -11,3 +11,4 @@ from cocktail import sort as cocktail_sort
 from oddeven import sort as oddeven_sort
 from heap import sort as heap_sort
 from stooge import sort as stooge_sort
+from bitonic import sort as bitonic_sort
