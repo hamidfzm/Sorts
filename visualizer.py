@@ -1,46 +1,48 @@
 __author__ = 'Hamid FzM'
 
-import turtle
-from random import randint
-from timeit import Timer
+# try:
+from Tkinter import *
+# from ttk import Frame, Button, Checkbutton, Label, Style
+# except ImportError:
+#     import tkinter
 
 
-def diagram():
-    pivot = turtle.Turtle()
-    pivot.penup()
-    pivot.goto(-200, -200)
+import Sort
+from Windows.diagram import Diagram
+import pkgutil
+root = Tk()
 
-    # draw horizontal edge
-    pivot.pendown()
-    pivot.fd(420)
-    pivot.stamp()
+# style = Style()
+# style.theme_use('default')
+Label(root, text='Select sort algorithms for comparison:').grid(row=1)
 
-    pivot.penup()
-    pivot.setx(-200)
+frm_sorts = Frame(root)
+lst_sorts = Listbox(frm_sorts, selectmode=MULTIPLE)
+scl_sorts = Scrollbar(frm_sorts, orient=VERTICAL)
 
-    # draw vertical edge
-    pivot.seth(90)
-    pivot.pendown()
-    pivot.fd(420)
-    pivot.stamp()
+for sort in Sort.__all__:
+    lst_sorts.insert(END, sort.replace('_sort', ''))
 
-    del pivot
+lst_sorts.config(yscrollcommand=scl_sorts.set)
+scl_sorts.config(command=lst_sorts.yview)
 
-wn = turtle.Screen()
-diagram()
-
-pen = turtle.Turtle()
-pen.hideturtle()
-pen.penup()
-pen.goto(-200, -200)
-pen.pendown()
-
-for i in xrange(400):
-    pen.goto(-200 + i,
-             -200 + Timer('quick_sort(%s)' % [randint(0, 5000) for x in xrange(i)], 'from Sort import quick_sort').timeit(number=1) * 100000)
+scl_sorts.grid(row=0, column=0, sticky=N+S)
+lst_sorts.grid(row=0, column=1)
+frm_sorts.grid(sticky=W, padx=5, pady=5)
 
 
-wn.getcanvas().postscript(file="duck.eps")
-turtle.done()
+def compare_cmd():
+    global root
+    Diagram(root, lst_sorts.curselection())
+
+    # canvas.postscript(file="duck.eps")
+
+
+frame = Frame(root)
+Button(frame, text='Compare', command=compare_cmd).grid(row=0, column=0, sticky=W)
+Button(frame, text='About', command=compare_cmd).grid(row=0, column=1, sticky=W)
+frame.grid(row=3, pady=5)
+
+root.mainloop()
 
 
