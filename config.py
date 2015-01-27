@@ -24,6 +24,10 @@ class Config:
     BABEL_DEFAULT_LOCALE = 'fa'
     BABEL_DEFAULT_TIMEZONE = 'UTC+03:30'
 
+    SECRET_KEY = '_wzo&&@&*13+54#r&tfjf_$auix-a^za$ihw)%m0c8u$0k^qon'
+
+    RANGE = xrange(100, 11000, 1000)
+
     SITE_TITLE = u'Sort Algorithms Comparisons'
 
     @staticmethod
