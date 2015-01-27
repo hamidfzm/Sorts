@@ -1,0 +1,25 @@
+{% extends "bootstrap/base.html" %}
+
+{% block html_attribs %} lang="fa"{% endblock %}
+
+{% block metas %}
+    {{ super() }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% endblock %}
+
+{% import "bootstrap/fixes.html" as fixes %}
+{% block head %}
+    {{ super() }}
+    {{ fixes.ie8() }}
+{% endblock %}
+
+{% block title %}Sort Algorithms Comparisons{% endblock %}
+
+
+{% block content %}
+    <div class="container" style="padding-bottom: 80px">
+        {% block page %}
+        {% endblock %}
+    </div>
+{% endblock %}
