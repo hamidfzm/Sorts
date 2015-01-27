@@ -21,8 +21,7 @@
 {% block title %}Sort Algorithms Comparisons{% endblock %}
 
 {% block content %}
-    <div class="embed-responsive">
-        {{ diagram.decode('utf-8')|safe }}
-    </div>
+    <a href="{{ url_for('index') }}" class="btn btn-warning" style="margin: 20px">Return ...</a>
+    {{ diagram.decode('utf-8')|safe }}
 
 {% endblock %}
