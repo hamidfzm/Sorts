@@ -3,6 +3,18 @@
 from random import randint
 from timeit import Timer
 import pygal
+from pygal.style import Style
+custom_style = Style(
+  background='transparent',
+  plot_background='transparent',
+  foreground='#53E89B',
+  foreground_light='#53A0E8',
+  foreground_dark='#630C0D',
+  opacity='.6',
+  opacity_hover='.9',
+  transition='400ms ease-in',
+  colors=('#E853A0', '#E8537A', '#E95355', '#E87653', '#E89B53'))
+
 
 from flask import render_template, current_app, redirect, url_for, flash, jsonify
 
@@ -21,7 +33,7 @@ def compare():
 
     if form.validate():
 
-        line_chart = pygal.Line()
+        line_chart = pygal.Line(style=custom_style)
         line_chart.title = 'Sort Algorithms Comparisons (ms)'
 
         line_chart.x_labels = [str(i) for i in current_app.config['RANGE']]
